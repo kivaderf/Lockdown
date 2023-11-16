@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AllSkEye</title>
+    </head>
+    <body text="#FFFFFF">
+        <br />
+        <br />
+        <h2>AllSkEye Latest Image</h2>
+        <br />
+        <table>
+            <tr>
+                <td>
+                    <img id="image0" src="/images/wales.jpg" alt="Please Wait…" name="image0" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br />Latest Image
+                    <br />
+                </td>
+            </tr>
+        </table>
+
+    <script>
+        interval = 10000;
+        imageUrl = "images/wales.jpg";
+
+        function Refresh() {
+            var im = document.getElementById('image0');
+
+            LoadAndSetNewImageIfFound(im, imageUrl);
+
+            setTimeout("Refresh()", interval);
+        }
+
+        function LoadAndSetNewImageIfFound(image, url) {
+            var newImg = new Image;
+            newImg.onload = function() {
+                image.src = this.src + "?" + new Date().getTime();
+            }
+            newImg.src = url;
+        }
+        Refresh();
+
+    </script>
+    </body>
+</html>
