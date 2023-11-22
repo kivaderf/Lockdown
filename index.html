@@ -1,21 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html-page" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Lockdown</title>
 
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/magnific-popup.min.css" rel="stylesheet">
+    <link href="css/tooplate-style.css" rel="stylesheet">
 </head>
 <body>
     
     <div id="video_box">
-        <div id="video_overlays">Logo</div>
+        <img id="video_overlays" src="images/ireland.jpg" alt="logo">
 
         <div>
             <video id="video" src="https://nickdesaulniers.github.io/netfix/demo/frag_bunny.mp4" type="video/mp4" muted autoplay></video>
         </div>
+    </div>
+
+    <div class="tm-container-fluid">
+		<section class="tm-site-header tm-flex-center tm-mb-50 tm-bgcolor-1 tm-border-rounded">
+			<i class="fas fa-heart fa-3x"></i>
+			<h1>Nano Folio</h1>
+		</section>
+
+		<section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
+			<div class="tm-about-header tm-flex-center">
+				<i class="fas fa-users fa-2x"></i>
+				<h2>About Us</h2>
+			</div>
+			<div class="tm-about-text">
+				<p class="tm-mb-40">
+                    Nano Folio is simple HTML template with a minimal very light-weight custom CSS file. Max content width is 940 pixels. 
+                    You can easily change the width or any part in this template. Gallery comes with a pop-up image and simple categories.
+                </p>
+				<p class="tm-mb-0">
+                    Please support Tooplate website by telling your friends about it. 
+                    That is going to be very helpful for us. Feel free to <a rel="nofollow" href="https://www.tooplate.com/contact" target="_blank">message us</a>
+                     via email or live chat if you have anything to say.
+                </p>
+			</div>
+		</section>
     </div>
 
     <script>
@@ -28,8 +57,10 @@
 
             if (vid.currentTime < 10) {
                 document.getElementById('video_box').style.display = 'block';
+                document.getElementById('html-page').style.overflow = 'hidden';
             } else {
                 document.getElementById('video_box').style.display = 'none';
+                document.getElementById('html-page').style.overflow = 'scroll';
             }
         }
     </script>

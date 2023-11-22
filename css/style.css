@@ -1,14 +1,18 @@
+html {
+    overflow: hidden;
+}
+
 #video_box {
-    position: relative;
+    position: absolute;
+    z-index: 9;
 }
 
 #video_overlays {
     position: absolute;
     width: 100px;
     min-height: 100px;
-    background-image: url(images/wales.jpg);
     background-size: cover;
-    z-index: 300000;
+    z-index: 10;
     bottom: 47.5%;
     left: 47.5%;
     text-align: center;
@@ -16,4 +20,8 @@
 
 #video {
     width: 1920px;
+}
+
+.tm-container-fluid {
+    position: relative;
 }
